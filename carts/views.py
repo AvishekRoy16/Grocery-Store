@@ -1,3 +1,4 @@
+from os import TMP_MAX
 from django.shortcuts import redirect, render
 from store_product.models import Product
 from .models import Cart, CartItem
@@ -43,6 +44,9 @@ def cart(request, total=0, quantity=0, cart_items=None):
         for cart_item in cart_items:
             total += (cart_item.product.price * cart_item.quantity)
             quantity += cart_item.quantity
+        gst = (18 * total)/100
+        grand_total = total + gst
+
     except :
         pass #just ignore
 
@@ -50,8 +54,8 @@ def cart(request, total=0, quantity=0, cart_items=None):
         'total': total,
         'quantity': quantity,
         'cart_items': cart_items,
-        # 'tax'       : tax,
-        # 'grand_total': grand_total,
+        'gst'       : gst,
+        'grand_total': grand_total,
     }
     return render(request, 'store_product/cart.html', context)
 
