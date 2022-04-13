@@ -33,10 +33,8 @@ def add_cart(request, product_id):
         )
         cart_item.save()
     return redirect('cart')
-<<<<<<< HEAD
 def cart(request):
     return render(request, "store_product/cart.html")
-=======
 
 def cart(request, total=0, quantity=0, cart_items=None):
     try:
@@ -56,4 +54,4 @@ def cart(request, total=0, quantity=0, cart_items=None):
         # 'grand_total': grand_total,
     }
     return render(request, 'store_product/cart.html', context)
->>>>>>> images
+
