@@ -4,7 +4,7 @@ from store_product.models import Product
 
 # Create your models here.
 
-class Cart (models.Model):
+class Cart(models.Model):
 
     cart_id= models.CharField(max_length=250, blank=True)
     date_added = models.DateField (auto_now_add=True)
