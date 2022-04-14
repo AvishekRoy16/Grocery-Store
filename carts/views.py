@@ -69,7 +69,7 @@ def cart(request, total=0, quantity=0, cart_items=None):
         gst = (18 * total)/100
         grand_total = total + gst
 
-    except :
+    except:
         pass #just ignore
 
     context = {
