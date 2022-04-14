@@ -56,7 +56,6 @@ def remove_cart_item(request, product_id):
     return redirect('cart')
 
 
-
 def cart(request):
     return render(request, "store_product/cart.html")
 
