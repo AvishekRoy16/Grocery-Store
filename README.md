@@ -7,3 +7,5 @@ When running the project first type
 ```
 pip install -r requirements.txt
 ```
+
+This is to check connection with Jira
