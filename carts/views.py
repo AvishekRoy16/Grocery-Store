@@ -1,7 +1,8 @@
 from os import TMP_MAX
 from django.shortcuts import get_object_or_404, redirect, render
 from store_product.models import Product
-from .models import Cart, CartItem
+from .models import Cart, CartItem 
+from django.http import HttpResponse
 # Create your views here.
 
 def _cart_id(request):
@@ -12,6 +13,10 @@ def _cart_id(request):
 
 
 def add_cart(request, product_id):
+    quantity = request.GET['quantity']
+    return HttpResponse(quantity)
+    exit()
+
     product = Product.objects.get(id = product_id)
     try:
         print(_cart_id(request))
