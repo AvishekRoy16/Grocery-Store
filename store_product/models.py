@@ -22,10 +22,14 @@ class Product (models.Model):
         return reverse("product_detail",args=[self.category.slug, self.slug])
 
     def _str_(self):
-
         return self.product_name
+
+class VariationManager(models.Manager):
+    def weights(self):
+        return super(VariationManager, self).filter(variation_category='weight', is_active=True)
+
 variation_catogery_choice =(
-    ('quantity','quantity'),
+    ('weight','weight'),
 )
 class Variation(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -33,6 +37,9 @@ class Variation(models.Model):
     variation_value = models.CharField(max_length=100)
     is_active = models.BooleanField(default=True)
     created_date = models.DateTimeField(auto_now=True)
+
+    objects = VariationManager()
+
 
     def __unicode__(self):
         return self.product

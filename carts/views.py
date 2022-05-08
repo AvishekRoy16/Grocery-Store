@@ -13,9 +13,10 @@ def _cart_id(request):
 
 
 def add_cart(request, product_id):
-    quantity = request.GET['quantity']
-    return HttpResponse(quantity)
-    exit()
+    if request.method == 'POST':
+        weight = request.POST['weight']
+        print(weight)
+    
 
     product = Product.objects.get(id = product_id)
     try:
