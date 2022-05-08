@@ -1,6 +1,6 @@
 from os import TMP_MAX
 from django.shortcuts import get_object_or_404, redirect, render
-from store_product.models import Product
+from store_product.models import Product, Variation
 from .models import Cart, CartItem 
 from django.http import HttpResponse
 # Create your views here.
@@ -14,8 +14,15 @@ def _cart_id(request):
 
 def add_cart(request, product_id):
     if request.method == 'POST':
-        weight = request.POST['weight']
-        print(weight)
+        for item in request.POST:
+            key = item
+            value = request.POST[key]
+            
+            try:
+                variation = Variation.objects.get(variation_category__iexact=key, variation_value__iexact=value)
+                print(variation)
+            except:
+                pass
     
 
     product = Product.objects.get(id = product_id)
