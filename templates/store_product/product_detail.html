@@ -36,11 +36,11 @@
 			<div class="row">
 				<div class="item-option-select">
 					<h6>Select Quantity</h6>
-					  <select name="'quantity" class="form-control">
-						  <option value="1kg">1Kg</option>
-						  <option value="2kg">2Kg</option>
-						  <option value="5kg">5Kg</option>
-						  <option value="10kg">10Kg</option>
+					  <select name="'quantity" class="form-control" required>
+						<option value="" disabled selected>Choose Quantity</option>
+						{% for i in single_product.variation_set.all %}
+						<option value="{{ i.variation_value }}">{{ i.variation_value }}</option>
+						{% endfor %}
 					  </select>
 				</div>
 			</div> <!-- row.// -->
