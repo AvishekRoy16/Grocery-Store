@@ -1,2 +1,3 @@
 env
 capstone
+db.sqlite3
