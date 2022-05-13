@@ -52,4 +52,4 @@ The future implementation will be online help for the customers and chatting wit
 
 <h3 align = "center"><img src="media\level 1.jpg" alt = "dfd level 1" ><h3><br><hr>
 
-<h3 align = "center"><img src="media\level 2.png" alt = "dfd level 2"><h3><br><hr>
+<h3 align = "center"><img src="media\level 2.jpg" alt = "dfd level 2"><h3><br><hr>
