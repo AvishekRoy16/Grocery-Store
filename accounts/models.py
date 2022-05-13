@@ -63,7 +63,7 @@ class Account(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
-    object = My_Account_Manager()
+    objects = My_Account_Manager()
 
     def _str_(self): 
         return self.email
