@@ -5,7 +5,7 @@ from .forms import OrderForm
 import datetime
 from .models import Order, Payment, OrderProduct
 import json
-from store_product.models import Product
+from store.models import Product
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 

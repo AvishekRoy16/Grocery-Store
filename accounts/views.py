@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm
 from .models import Account
@@ -6,7 +5,6 @@ from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
-# Create your views here.
 # Verification email
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
@@ -114,7 +112,7 @@ def login(request):
                     nextPage = params['next']
                     return redirect(nextPage)                
             except:
-                return redirect('dashboard')            
+                return redirect('dashboard')
         else:
             messages.error(request, 'Invalid login credentials')
             return redirect('login')
