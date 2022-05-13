@@ -152,6 +152,6 @@ MESSAGE_TAGS = {
 # SMTP configuration
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'keshav.mittal19@st.niituniversity.in'
-EMAIL_HOST_PASSWORD = ""
+EMAIL_HOST_USER = "course.data.science22@gmail.com"
+EMAIL_HOST_PASSWORD = "abcd#1234"
 EMAIL_USE_TLS = True
