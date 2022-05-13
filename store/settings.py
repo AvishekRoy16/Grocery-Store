@@ -144,11 +144,6 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
 
-from django.contrib.messages import constants as messages
-MESSAGE_TAGS = {
-    messages.ERROR: 'danger',
-}
-
 
 # SMTP configuration
 EMAIL_HOST = 'smtp.gmail.com'
