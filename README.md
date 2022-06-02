@@ -33,9 +33,9 @@ This project helps the user and seller to buy and sell grocery products respecti
 
 ## <u> Software Interface Used: </u>
 <ul type = "Square">
-<li>Operating System: Windows 10,11</li>
+<li>Operating Systems Used: Windows 10, Ubuntu 20.04 </li>
 <li>Wireframe:</li>
-<li>Coding Language: HTML , CSS , Python</li>
+<li>Coding Language: HTML , CSS , JavaScript, Python</li>
 <li>Backend: Django</li>
 <li>IDE: VsCode</li>
 <li>Collaboration Platform: GitHub, Jira</li>
